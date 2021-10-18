@@ -1,0 +1,22 @@
+Built with BOOTSTRAP 4 & JAVAScript for every viewport.
+
+Text Formatter & PDF Converter :
+
+It Formats your text nicely and converts it into (Capitalize case, UPPERCASE, lowercase, Reverse case and Italic) if needed and it eleminates extra spaces if exist. You can Download your in PDF or TXT format if you want. It also counts your words and characters finely. 
+
+Tip Calculator :
+
+Knowing how to calculate an appropriate tip is also important to ensure that you tip the right amount in a given setting. For example, many people believe that tipping 15-20% is appropriate in restaurant settings, while the tipping rate may be more or less in other service industry settings. Being able to accurately tip can save you both time and money and can ensure that the person providing the service to you is adequately compensated.
+
+Percentage Calculator :
+
+Percentage can be calculated by dividing the value by the total value, and then multiplying the result by 100. The formula used to calculate percentage is: (value/total value)×100%.
+
+Color Picker :
+
+Because color appearance depends on comparison of neighboring colors (see color vision), many interfaces attempt to clarify the relationships between colors. When the tool is engaged on a color to pick, the color may also be changed from the original one selected with it.
+
+Gradient Maker :
+
+Gradient Backgrounds. CSS gradients let you display smooth transitions between two or more specified colors. CSS defines two types of gradients: Linear Gradients (goes down/up/left/right) Radial Gradients (defined by their center)
+

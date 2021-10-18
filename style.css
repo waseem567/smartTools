@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Varela+Round&display=swap");
+
+.font_varela {
+  font-family: "Varela Round", sans-serif;
+}
+.ubuntu_family {
+  font-family: "Ubuntu", sans-serif;
+}
+.para_2 {
+  text-indent: 30%;
+}
+.fw_600 {
+  font-weight: 600;
+}
+.captalize {
+  text-transform: capitalize;
+}
+.italic {
+  font-style: italic;
+}
+textarea {
+  border: 3px solid orange;
+  border-radius: 8px;
+}
+.sun {
+  color: yellow;
+  font-size: 25px;
+  cursor: pointer;
+}
+.moon {
+  color: yellow;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+.bg_black {
+  background: #000 !important;
+  color: white;
+}
+.bg_light {
+  background: #27272c !important;
+  color: white;
+}
+.container {
+  border-radius: 20px;
+}
+.bg_dark {
+  background: #000;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: unset;
+}
+.bg_btn {
+  background: orange;
+  color: #000;
+  border: none !important;
+}
+.anchor {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  border-width: 0px !important;
+  border-bottom: 3px solid white !important;
+}
+.anchor:hover {
+  text-decoration: none;
+  color: white;
+  /* border-bottom: 3px solid orange !important; */
+}
+.peopleNum,
+.billing,
+.percentage {
+  background: #e3e3e3;
+}
+.mr_auto {
+  margin-left: auto;
+}
+.btn {
+  letter-spacing: 3px;
+  color: red !important;
+}
+.tipCard {
+  border: 3px solid orange;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1000px) {
+  .tipCard {
+    width: 65vw !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tipCard {
+    width: 75vw !important;
+  }
+}
+@media screen and (max-width: 574px) {
+  .tipCard {
+    width: 99% !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pCalculator, .bgInnerBox {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .pCalculator, .bgInnerBox {
+    width: 95% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .pCalculator,.bgInnerBox {
+    width: 97% !important;
+  }
+}
+#clrPicker{
+  height: 200px;
+  width: 30%;
+}
+/* gradient maker */
+#clrOne , #clrTwo{
+  height: 90px;
+  width: 90%;
+}
+.bg_grd{
+  background-image : linear-gradient(to left , #1446db , #ff00c8);
+}
+.bgBlu{
+  background: rgb(2, 61, 189) !important;
+  color: white !important;
+}
+.bgInnerBox{
+  background: white;
+  border-radius: 20px;
+}
+
+

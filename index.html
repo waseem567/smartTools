@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <meta
+      name="description"
+      content="This is an example of a meta description. This will often show up in search results."
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="/html css/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Text Formatter - We design your text</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-light bg_dark p-0 position-fixed top-0 start-0 w-100"
+    >
+      <div
+        class="
+          container-fluid
+          font_varela
+          fw-bolder
+          text-white text-center
+          py-2
+          w-75
+        "
+      >
+        SMART TOOLS
+      </div>
+      <div class="w-25 text-end px-4">
+        <i class="fal fa-sun sun"></i>
+        <i class="far fa-moon moon"></i>
+      </div>
+    </nav>
+    <div class="text-center font_varela fw-bolder py-4 fs-4 mt-5">
+      Text Formatter
+    </div>
+
+    <div class="container bg-light pb-3">
+      <p class="font_varela p-3">
+        Once you have finished with the content of your page, you can then begin
+        formatting your text. It is important to make sure that whatever
+        formatting you decide to use is used consistently throughout the site,
+        since you don't want it to be visually jarring to visitors. In addition,
+        more attention should be given to content rather than formatting, since
+        it is the content that will be of interest to those using your site.
+      </p>
+      <div class="text-center font_varela fw-bolder py-2">
+        Paste Your Text Here
+      </div>
+      <div class="text_area">
+        <textarea
+          class="w-100 rounded font_varela p-2 shadow-sm"
+          placeholder="Enter your text here...."
+          id="textEntered"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="text-center font_varela fw-bolder py-2">
+        Customise your text
+      </div>
+      <div class="btns text-center px-0">
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1 w-50 d-block mx-auto"
+          onclick="pdfText()"
+        >
+          Convert to PDF & Download
+          <i class="far fa-file-pdf mx-3 text-danger"></i>
+        </button>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1 w-50 d-block mx-auto"
+          onclick="download()"
+          id="dnld"
+        >
+          Download TXT File<i class="fal fa-file-alt mx-3 text-success"></i>
+        </button>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1"
+          onclick="capitalizeText()"
+        >
+          Captalize
+        </button>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1"
+          onclick="upperCaseText()"
+        >
+          UpperCase
+        </button>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1"
+          onclick="lowerCaseText()"
+        >
+          LowerCase
+        </button>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1"
+          onclick="spaceRemover()"
+        >
+          Remove Extra Space
+        </button>
+
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1"
+          onclick="invertText()"
+        >
+          Inverse Case
+        </button>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1"
+          onclick="characterReverse()"
+        >
+          Reverse Text
+        </button>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1"
+          onclick="italicText()"
+        >
+          Italic Text
+        </button>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1 speak"
+        >
+          Hear Text
+        </button>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1"
+          onclick="copyText()"
+        >
+          Copy Text
+        </button>
+
+        <button
+          type="submit"
+          class="border rounded-1 px-5 fw_600 py-1 mt-1 w-50"
+          onclick="clearText()"
+        >
+          Clear the text
+        </button>
+      </div>
+      <div class="desc text-center">
+        <div class="text-center font_varela fw-bolder py-2">Counter:</div>
+        <button
+          type="submit"
+          class="border rounded-1 px-4 fw_600 py-1 mt-1 mx-1"
+          onclick="counter()"
+        >
+          Count words and characters
+        </button>
+
+        <div class="text-center">
+          <span class="font_varela fw_600 mx-2"
+            >Words Count : <span class="wordsNum"></span
+          ></span>
+          <span class="font_varela fw_600 mx-2"
+            >Characters count : <span class="charNum"></span
+          ></span>
+        </div>
+      </div>
+      <div class="font_varela fw_600 border-bottom d-inline-block mt-5">
+        Convert to PDF & Download
+        <i class="far fa-file-pdf mx-3 text-danger"></i> :
+      </div>
+      <p class="px-5 ubuntu_family py-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio nam,
+        repellendus impedit amet fugit sequi earum id, recusandae consequatur
+        voluptatum sunt eaque odit iure culpa quae atque delectus voluptatibus
+        magni. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Repudiandae omnis nostrum reiciendis voluptatum, itaque molestiasem.
+      </p>
+      <div class="font_varela fw_600 border-bottom d-inline-block mt-5">
+        Download TXT File<i class="fal fa-file-alt mx-3 text-success"></i> :
+      </div>
+      <p class="px-5 ubuntu_family py-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio nam,
+        repellendus impedit amet fugit sequi earum id, recusandae consequatur
+        voluptatum sunt eaque odit iure culpa quae atque delectus voluptatibus
+        magni. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Repudiandae omnis nostrum reiciendis voluptatum, itaque molestiasem.
+      </p>
+    </div>
+
+    <div class="fw_600 font_varela text-center my-4 fs-4">Tip Collector</div>
+    <div class="container bg-light py-4">
+      <div class="text-center font_varela fw-bolder mt-3">How it works?</div>
+      <p class="px-5 py-3 ubuntu_family">
+        Knowing how to calculate an appropriate tip is also important to ensure
+        that you tip the right amount in a given setting. For example, many
+        people believe that tipping 15-20% is appropriate in restaurant
+        settings, while the tipping rate may be more or less in other service
+        industry settings. Being able to accurately tip can save you both time
+        and money and can ensure that the person providing the service to you is
+        adequately compensated
+      </p>
+      <div
+        class="
+          w-50
+          tipCard
+          rounded
+          fw_600
+          font_varela
+          mx-auto
+          py-5
+          shadow-sm
+          mt-3
+        "
+      >
+        <div class="d-flex justify-content-between p-3">
+          <label class="mt-1">Bill :</label>
+          <input type="number" class="py-2 border rounded w-75 amount" />
+        </div>
+        <div
+          class="
+            text-center
+            border
+            rounded
+            py-2
+            w-75
+            mx-auto
+            billing
+            box
+            border-0
+          "
+        >
+          <span class="bill"></span><span> $</span>
+        </div>
+        <div class="d-flex justify-content-between p-3">
+          <label class="mt-1">Tip% :</label>
+          <input type="range" class="border rounded w-75 range" />
+        </div>
+        <div
+          class="
+            text-center
+            border
+            rounded
+            py-2
+            w-75
+            mx-auto
+            percentage
+            box
+            border-0
+          "
+        >
+          <span class="cntg"></span><span> %</span>
+        </div>
+        <div class="d-flex justify-content-between p-3">
+          <label class="mt-1">Number of people :</label>
+          <input
+            type="number"
+            class="py-2 border rounded w-75 people"
+            min="1"
+            value="1"
+            step="1"
+          />
+        </div>
+        <div
+          class="
+            text-center
+            border
+            rounded
+            py-2
+            w-75
+            mx-auto
+            peopleNum
+            box
+            border-0
+          "
+        >
+          <span class="ppl"></span><span> People</span>
+        </div>
+        <div class="text-center my-2">Tip : <span class="tip"></span></div>
+        <div class="text-center my-2">Total : <span class="total"></span></div>
+        <div class="text-center pt-3">
+          <button
+            type="submit"
+            class="
+              bg-dark
+              btn
+              text-danger
+              border-0
+              px-4
+              rounded
+              py-2
+              fw_600
+              font_varela
+              w-75
+              calBtn
+            "
+          >
+            CALCULATE
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="text-center fw_600 font_varela fs-4 py-4">
+      Percentage Calculator
+    </div>
+    <div class="container bg-light">
+      <div class="text-center fw_600 font_varela py-2">How it works</div>
+      <p class="ubuntu_family px-5 pt-3">
+        Percentage can be calculated by dividing the value by the total value,
+        and then multiplying the result by 100. The formula used to calculate
+        percentage is: (value/total value)×100%.
+      </p>
+      <p class="fw_600 text-center">
+        To find the percentage of a number between two numbers, divide one
+        number with the other and then multiply the result by 100.
+      </p>
+
+      <div class="w-50 border rounded mx-auto pCalculator mb-5">
+        <div
+          class="
+            bg-danger
+            text-white
+            fw_600
+            font_varela
+            m-2
+            rounded
+            text-center
+            py-2
+          "
+        >
+          Percentage Calculator
+        </div>
+        <div class="text-center">
+          <div class="text-primary fw_600 font_varela py-2">Percentage</div>
+          <div class="py-1">
+            <span class="mx-3 fw_600 font_varela">OF</span> X :<input
+              type="number"
+              class="py-2 mx-md-4 fValue box border"
+              min="0"
+              step="1"
+            />
+          </div>
+          <div class="mt-2 py-1">
+            <span class="mx-1 fw_600 font_varela">FROM</span> Y :<input
+              type="number"
+              class="py-2 mx-md-2 sValue box border"
+              min="0"
+              step="1"
+            />
+          </div>
+          <div class="py-1 pb-3">
+            <button
+              type="submit"
+              class="
+                btn-success
+                border-0
+                w-25
+                py-2
+                fw_600
+                font_varela
+                rounded
+                my-2
+              "
+              onclick="showPercentage()"
+            >
+              Percentage
+            </button>
+          </div>
+          <div class="text-center py-3">
+            <span class="xValue fw_600">X</span> is
+            <span class="bothPrcntg fw_600"></span>% of
+            <span class="yValue fw_600">Y</span>
+          </div>
+          <div class="border"></div>
+          <div class="text-primary fw_600 font_varela py-2">Value</div>
+          <div class="py-1">
+            <span class="mx-3 fw_600 font_varela">OF</span> % :<input
+              type="number"
+              class="py-2 mx-md-4 pValue box border"
+              min="0"
+              step="1"
+            />
+          </div>
+          <div class="mt-2 py-1">
+            <span class="mx-1 fw_600 font_varela">FROM</span> Y :<input
+              type="number"
+              class="py-2 mx-md-2 ttlValue box border"
+              min="0"
+              step="1"
+            />
+          </div>
+          <div class="py-1 pb-3">
+            <button
+              type="submit"
+              class="
+                btn-success
+                border-0
+                w-25
+                py-2
+                fw_600
+                font_varela
+                rounded
+                my-2
+              "
+              onclick="showPercentageValue()"
+            >
+              value
+            </button>
+          </div>
+          <div class="text-center py-3">
+            <span class="value fw_600 mx-1"></span>% of
+            <span class="ttl fw_600 mx-1"></span> is
+            <span class="prcntage fw_600 mx-1"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center fs-4 fw_600 font_varela">Smart Color picker</div>
+    <div class="container bg-light">
+      <p class="px-5 text-center pt-5">
+        A color picker is used to select and adjust color values. In graphic
+        design and image editing, users typically choose colors via an interface
+        with a visual representation of a color—organized with
+        quasi-perceptually-relevant hue, saturation and lightness dimensions
+        (HSL) – instead of keying in alphanumeric text values.
+      </p>
+      <p class="px-5 text-center fw_600">
+        Because color appearance depends on comparison of neighboring colors
+        (see color vision), many interfaces attempt to clarify the relationships
+        between colors. When the tool is engaged on a color to pick, the color
+        may also be changed from the original one selected with it.
+      </p>
+      <div class="font_varela fw_600 text-center">
+        Click on it & select your desired color
+      </div>
+      <div class="text-center"><input type="color" id="clrPicker" value="#B80F0A" /></div>
+      <div class="text-center fw_600 font_varela">
+        Copy Hex code of your selected color
+      </div>
+      <div class="text-center py-1">
+        <input type="text" class="py-2 text-center fw_600 box border" id="hexCode" />
+      </div>
+      <div class="text-center py-1">
+        <button
+          type="submit"
+          onclick="copyCode()"
+          class="border-0 px-5 btn-success rounded py-2"
+        >
+          Copy <i class="fas fa-copy"></i>
+        </button>
+      </div>
+    </div>
+    <div class="text-center fs-4 fw_600 font_varela py-4">
+      Smart Gradient Maker
+    </div>
+    <div class="bg_grd container py-5" id="setBackground">
+      <p class="p-5 text-center fw_600 text-white">
+        Gradient Backgrounds. CSS gradients let you display smooth transitions
+        between two or more specified colors. CSS defines two types of
+        gradients: Linear Gradients (goes down/up/left/right/diagonally) Radial
+        Gradients (defined by their center)
+      </p>
+
+      <div class="fw_600 text-center text-white">Select your color & Copy its code</div>
+      <div class="w-50 mx-auto border py-5 bgInnerBox box">
+        <div class="d-flex">
+          <div class="text-center w-50">
+            <input type="color" class="border-0" id="clrOne" value="#DC143C">
+            <div class="w-100"></div>
+            <div class="fw_600 font_varela">ColorOne</div>
+          </div>
+          <div class="text-center w-50">
+            <input type="color" class="border-0" id="clrTwo" value="#00FF00">
+            <div class="w-100"></div>
+            <div class="fw_600 font_varela">ColorTwo</div>
+          </div>
+        </div>
+        <div class="text-center fw_600 py-2">Set Directions</div>
+        <div class="text-center buttons">
+          <button type="submit" class="border rounded px-3 py-2 bgBlu" onclick="setDirection('to top' , this)"><i class="fas fa-arrow-up"></i></button>
+          <button type="submit" class="border rounded px-3 py-2 bgBlu" onclick="setDirection('to bottom' , this)"><i class="fas fa-arrow-down"></i></button>
+          <button type="submit" class="border rounded px-3 py-2 bgBlu" onclick="setDirection('to right' , this)"><i class="fas fa-arrow-right"></i></button>
+          <button type="submit" class="border rounded px-3 py-2 bgBlu" onclick="setDirection('to left', this)"><i class="fas fa-arrow-left"></i></button>
+        </div>
+        <div class="text-center fw_600 py-2">Click here to generate Code </div>
+        <div class="text-center py-2"><button type="submit" class="btn-danger text-white border-0 rounded px-3 py-2" onclick="generateCode()">Generate Code</button></div>
+        <div class="text-center mt-4">
+          <input class="w-75 py-5 mx-1 border rounded bg-light text-center fw_600" type="text" id="setGrad">
+        </div>
+        <div class="text-center py-3">
+          <button type="submit" class="border-0 py-2 rounded fw_600 btn-success" onclick="copyGrdCode()">Copy Gradient Code <i class="fas fa-copy"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="text-center font_varela fw-bolder mt-5">
+      CopyRightReserved(2020 - 2021)
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
